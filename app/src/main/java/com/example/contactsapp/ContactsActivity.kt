@@ -25,7 +25,6 @@ class ContactsActivity : AppCompatActivity() {
             Contacts("Sylvia Amondi","079845743","amondisly@gmil.com"),
             Contacts("Peter Marocho","0789538946","pmarocho@gmil.com"),
             Contacts("Lynne Hasset","0706743954","lyne254h@gmil.com"),
-            Contacts("Belinda Omwami","078043662","lindamwas@gmil.com"),
             Contacts("Shadya Obuya ","07923854524","shadyaobuyagard@gmil.com"),
 
             )
