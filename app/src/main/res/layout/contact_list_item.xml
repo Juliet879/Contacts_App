@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvContacts"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
@@ -18,69 +19,53 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="8dp"
-            android:text="Name: "
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="188dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="120dp"
             android:text="Paul Odiedo"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            android:textColor="#0C0C0C"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="14dp"
-            android:text="Phone : "
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintHorizontal_bias="0.365"
+            app:layout_constraintStart_toEndOf="@+id/imgContact"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="184dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="116dp"
             android:text="0748768890"
-            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            android:textColor="#0C0C0C"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView4"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="8dp"
-            android:text="Email : "
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toEndOf="@+id/imgContact"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
         <TextView
             android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="116dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="48dp"
             android:text="odiedopaul@gmail.com"
-            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            android:textColor="#070707"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView6"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toEndOf="@+id/imgContact"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+        <ImageView
+            android:id="@+id/imgContact"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
