@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewContactActivity">
+    tools:context=".ui.ViewContactActivity">
 
     <ImageView
         android:id="@+id/imgView"
@@ -99,4 +99,25 @@
         app:layout_constraintTop_toTopOf="@+id/tvEmailView"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_email_24" />
+
+    <ImageView
+        android:id="@+id/imgCamera"
+        android:maxWidth="32dp"
+        android:maxHeight="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgView"
+        app:layout_constraintEnd_toEndOf="@+id/imgView"
+        app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+    <ImageView
+        android:id="@+id/ivGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCamera"
+        app:layout_constraintEnd_toStartOf="@+id/imgCamera"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

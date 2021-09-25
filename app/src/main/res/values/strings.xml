@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ContactsApp</string>
+    <string name="name_required">Name is required</string>
+    <string name="phone_required">Phone is required</string>
+    <string name="email_required">Email is required</string>
+    <string name="save_contact">Save Contact</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="name">Name</string>
 </resources>

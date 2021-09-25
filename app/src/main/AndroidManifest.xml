@@ -3,25 +3,37 @@
     package="com.example.contactsapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
+        android:name=".ContactsApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ContactsApp">
-        <activity android:name=".ViewContactActivity"
-            android:parentActivityName=".ContactsActivity"></activity>
-        <activity android:name=".ContactsActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.AddContactActivity"></activity>
+        <activity
+            android:name=".ui.ViewContactActivity"
+            android:parentActivityName=".ui.ContactsActivity" />
+        <activity
+            android:name=".ui.ContactsActivity"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+    <provider
+        android:authorities="${applicationId}.provider"
+        android:name="androidx.core.content.FileProvider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_provider"/>
+    </provider>
     </application>
 
 </manifest>
