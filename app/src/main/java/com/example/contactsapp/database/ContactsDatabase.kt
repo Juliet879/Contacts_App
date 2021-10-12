@@ -10,7 +10,7 @@ import com.example.contactsapp.models.Note
 
 @Database(entities = arrayOf(Contact::class, Note::class),version = 1)
 abstract class ContactsDatabase:RoomDatabase() {
-    abstract fun contactDao(): ContactDao
+    abstract fun getContactDao(): ContactDao
 
     abstract fun notesDao(): NotesDao
 

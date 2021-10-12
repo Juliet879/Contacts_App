@@ -19,7 +19,6 @@ import com.example.contactsapp.R
 import com.example.contactsapp.databinding.ActivityViewContactBinding
 import com.example.contactsapp.models.Contact
 import com.example.contactsapp.viewmodels.ContactsViewModel
-import com.squareup.picasso.Picasso
 import java.io.File
 import java.util.jar.Manifest
 
@@ -37,7 +36,6 @@ class ViewContactActivity : AppCompatActivity() {
         val contactId = intent.getIntExtra("ID", 0)
         contactViewModel.getAllContactById(contactId)
     }
-
 
     override fun onResume() {
         super.onResume()
@@ -91,29 +89,31 @@ class ViewContactActivity : AppCompatActivity() {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     pickPhotoFromGallery()
                 } else {
-                    Toast.makeText(baseContext, "Permission requires", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Permission required to proceed", Toast.LENGTH_LONG).show()
                 }
 
             }
         }
     }
 
-    private fun pickPhotoFromGallery() {
-        val gallery = Intent(Intent.ACTION_PICK)
-        intent.type = "image/*"
-        galleryLaucher.launch(gallery)
-    }
+
 
     var galleryLaucher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
-                var imageUri = result.data?.data
+                val imageUri = result.data?.data
                 val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, imageUri)
                 binding.imgView.setImageBitmap(bitmap)
 //            myContact.imageUrl =
 //            contactViewModel.saveContact(myContact)
             }
         }
+
+    private fun pickPhotoFromGallery() {
+        val gallery = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        galleryLaucher.launch(gallery)
+    }
 
     var cameraLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->

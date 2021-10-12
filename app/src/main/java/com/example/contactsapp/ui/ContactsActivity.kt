@@ -11,7 +11,10 @@ import com.example.contactsapp.viewmodels.ContactsViewModel
 import com.example.contactsapp.R
 import com.example.contactsapp.databinding.ActivityContactsBinding
 import com.example.contactsapp.models.Contact
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 
+@AndroidEntryPoint
 class ContactsActivity : AppCompatActivity() {
     lateinit var binding:ActivityContactsBinding
     val contactsViewModel: ContactsViewModel by viewModels()

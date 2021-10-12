@@ -12,7 +12,6 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.contactsapp.models.Contact
 import com.example.contactsapp.ui.ViewContactActivity
-import com.squareup.picasso.Picasso
 
 class ContactsRecyclerViewAdapter(var contactsList:List<Contact>, var context: Context):RecyclerView.Adapter<ContactViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
